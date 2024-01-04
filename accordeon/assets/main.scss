@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+// Accordion
+.accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	max-width: 600px;
+	margin: 100px auto;
+	width: 100%;
+	// .accordion__item
+	&__item {
+		border: 1px solid black;
+		border-radius: 6px;
+		cursor: pointer;
+
+		&.active {
+			.accordion__icon {
+				rotate: 180deg;
+			}
+		}
+	}
+	// .accordion__trigger
+	&__trigger {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px;
+	}
+	// .accordion__title
+	&__title {
+		line-height: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+	}
+	// .accordion__icon
+	&__icon {
+		transition: rotate 0.3s;
+	}
+	// .accordion__content
+	&__content {
+		display: none;
+	}
+	// .accordion__text
+	&__text {
+		font-size: 14px;
+		padding: 0 20px 20px;
+	}
+}
